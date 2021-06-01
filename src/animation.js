@@ -18,7 +18,7 @@ let startButtonGame = document.querySelector(".start-btn")
 
 
 
-startGame()
+// startGame()
 resetDisplayScreen()
 function resetDisplayScreen() {
      globalClickCOunt = 0
