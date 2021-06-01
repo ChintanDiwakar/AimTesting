@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  font-size: 4rem;
+  color: #ff4655;
+}
+
+.head-section {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 4px;
+  overflow: auto;
+}
+.box {
+  height: 7rem;
+  width: 7rem;
+
+  border: 1px solid black;
+}
+.start-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.4rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #ff4655;
+  border-radius: 10px;
+  color: white;
+  border: 2px solid white;
+}
+
+.refresh {
+  color: #ff4655;
+  margin-right: 0px;
+  float: right;
+  /* width: 3rem;
+  height: 3rem; */
+}
+.start-btn:hover {
+  cursor: pointer;
+  background-color: #ff5664;
+}
+
+.name {
+  font-size: 0.5rem;
+  color: aqua;
+  /* transform : translateX(0px);  */
+  animation-name: moving;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.movingRight {
+  color: black;
+}
+@keyframes moving {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(3.55rem, 3.4rem);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: moveUp;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translate(3.55rem, 3.4rem);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    animation-name: moving;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.main {
+  margin-top: 10rem;
+}
+.ballWindow {
+  margin: auto;
+  position: relative;
+  border: 3px solid black;
+  height: 40rem;
+  width: 60%;
+}
+
+.display {
+  margin: auto;
+  /* height: 60rem; */
+  width: 60%;
+  /* display: flex; */
+}
+.pointer-shoot {
+  color: red;
+
+  animation: leaves 0.5s ease-in-out infinite alternate;
+}
+
+.display-text {
+  float: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.4rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #ff4655;
+  border-radius: 6px;
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  /* width: 10%; */
+  text-align: center;
+  margin-right: 10px;
+}
+@keyframes leaves {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+.killshot {
+  position: absolute;
+  /* top: 0; */
+  /* display: block; */
+
+  /* margin-top: -30px; */
+  /* left: 10px; */
+  /* height: 10px; */
+  margin-left: -4px;
+  animation: killeffect 1s;
+}
+
+@keyframes killeffect {
+  0% {
+    opacity: 1;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -30px;
+  }
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.temp {
+  height: 100px;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+
+/* Navigation bar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #ff5664;
+  overflow: hidden;
+  /* background-color: #333; */
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+#killit {
+  font-size: 80px;
+  color: white;
+  margin: auto;
+  margin-left: 10px;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 24px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
